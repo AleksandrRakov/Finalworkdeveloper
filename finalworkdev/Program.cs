@@ -12,7 +12,7 @@ void EnterArray(string[] arr)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"элементы : ");
+        Console.Write($"элемент {i} : ");
         array[i] = Convert.ToString(Console.ReadLine());
     }
 }
@@ -28,16 +28,18 @@ void PrintArray(string[] arr)
     Console.Write($" ]");
 }
 
-void PrintArrayNew(string[] arr)
+
+string[] NewArray(string[] arr)
 {
-    Random rnd = new Random();
-    Console.Write($"[ ");
-    for (int i = rnd.Next(); i < arr.Length; i++)
-    {
-        if (i < arr.Length - 1) Console.Write($"{arr[i]}; ");
-        else Console.Write($"{arr[i]}");
-    }
-    Console.Write($" ]");
+    int a = new Random().Next(0,3);
+    string[] newArr = new string[a];
+    
+    for (int j = 0; j < a; j++)
+        {
+            int i = new Random().Next(0, size);
+            newArr[j] = arr[i];
+        }
+    return newArr;
 }
 
 
@@ -45,4 +47,8 @@ EnterArray(array);
 Console.WriteLine();
 PrintArray(array);
 Console.WriteLine();
-PrintArrayNew(array);
+string[] newArray = NewArray(array);
+PrintArray(newArray);
+
+
+
