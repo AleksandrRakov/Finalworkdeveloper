@@ -10,7 +10,7 @@ string[] array = new string[size];
 
 void EnterArray(string[] arr)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
         Console.Write($"элемент {i} : ");
         array[i] = Convert.ToString(Console.ReadLine());
