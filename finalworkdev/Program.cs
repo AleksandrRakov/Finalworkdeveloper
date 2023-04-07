@@ -31,7 +31,7 @@ void PrintArray(string[] arr)
 
 string[] NewArray(string[] arr)
 {
-    int a = new Random().Next(0,3);
+    int a = new Random().Next(0,4);
     string[] newArr = new string[a];
     
     for (int j = 0; j < a; j++)
